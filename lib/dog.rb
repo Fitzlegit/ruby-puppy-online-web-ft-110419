@@ -10,18 +10,18 @@ class Dog
     @name = name
   end
   
+  def save
+    @@all << self
+  end
+  
   def self.all
-    self
+    @@all
   end
   
   def self.print_all
     @@all.each{|name| puts "name"}
   end
-  
-  def save
-    @@all << self
-  end
-  
+
   def self.clear_all
     @@all.clear
   end
